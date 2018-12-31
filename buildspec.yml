@@ -3,9 +3,11 @@ phases:
   build:
     commands:
       - ls -la
+      - php --version
   install:
     commands:
-      - echo nothing todo here
+      - echo Istalling composer dependencies
+      - composer install
   post_build:
     commands:
       - pwd
