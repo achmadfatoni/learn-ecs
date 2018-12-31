@@ -1,0 +1,11 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - echo nothing todo here
+  install:
+    commands:
+      - echo nothing todo here
+  post_build:
+    commands:
+      - pwd
