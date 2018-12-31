@@ -2,10 +2,10 @@ version: 0.2
 phases:
   install:
     commands:
-      - cp .env.example .env
-      - php artisan key:generate
       - echo Istalling composer dependencies
       - composer install --no-progress --no-suggest
+      - cp .env.example .env
+      - php artisan key:generate
   build:
     commands:
       - ./vendor/bin/phpunit
