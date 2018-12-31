@@ -1,13 +1,12 @@
 version: 0.2
 phases:
-  build:
-    commands:
-      - ls -la
-      - php --version
   install:
     commands:
       - echo Istalling composer dependencies
-      - composer install
+      - composer install --no-progress --no-suggest
+  build:
+    commands:
+      - ./vendor/bin/phpunit
   post_build:
     commands:
       - pwd
