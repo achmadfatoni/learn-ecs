@@ -7,7 +7,8 @@ phases:
       - cp .env.example .env
       - php artisan key:generate
   pre_build:
-    - $(aws ecr get-login --region $AWS_DEFAULT_REGION)
+    commands:
+      - $(aws ecr get-login --region $AWS_DEFAULT_REGION)
   build:
     commands:
       - ./vendor/bin/phpunit
